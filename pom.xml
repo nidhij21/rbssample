@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.rbs.sample</groupId>
 	<artifactId>rbs</artifactId>
-	  <packaging>war</packaging>
+	 <packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>rbs</name>
 	<description>Demo project for Spring Boot</description>
@@ -28,13 +28,13 @@
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-starter-tomcat</artifactId>
 				</exclusion>
-				<exclusion>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-starter-logging</artifactId>
-				</exclusion>
 			</exclusions>
 		</dependency>
-
+   <dependency>
+          <groupId>javax.servlet</groupId>
+          <artifactId>javax.servlet-api</artifactId>
+          <version>3.1.0</version>
+      </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -43,16 +43,13 @@
 	</dependencies>
 
 	<build>
-    <finalName>getting-started-tomcat</finalName>
-      <plugins>
-          <plugin>
-              <artifactId>maven-war-plugin</artifactId>
-              <version>2.6</version>
-              <configuration>
-                  <warName>ROOT</warName>
-              </configuration>
-          </plugin>
-      </plugins>
-  </build>
+	<finalName>rbs</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
